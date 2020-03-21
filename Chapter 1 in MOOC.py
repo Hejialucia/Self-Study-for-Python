@@ -11,7 +11,7 @@ area = 3.1415 * r * r
 print(area)
 print("{:.2f}".format(area))
 
-#同切圆绘制
+# 同切圆绘制
 import turtle
 turtle.pensize(2)
 turtle.circle(10)
@@ -19,7 +19,7 @@ turtle.circle(40)
 turtle.circle(80)
 turtle.circle(160)
 
-#五角星绘制
+# 五角星绘制
 import color as color
 from turtle import*
 color('red','red')
@@ -29,18 +29,18 @@ for i in range(5):
     rt(144)
 end_fill()
 
-#温度转换 摄氏度-华氏度
+# 温度转换 摄氏度-华氏度
 TempStr = input("请输入带有符号的温度值：")
 if TempStr[-1] in ['F','f']:
     C = (eval(TempStr[0:-1])-32) / 1.8
     print("转换后的温度是{:.2f}C".format(C))
 elif TempStr[-1] in ['C', 'c']:
-    F = 1.8 * eval (TempStr[0:-1])+ 32
+    F = 1.8 * eval(TempStr[0:-1])+ 32
     print("转换后的温度是{:.2f}F".format(F))
 else:
     print("输入格式错误")
-    
-#HelloWorld
+
+# HelloWorld
 Number = eval(input())
 if Number == 0:
     print("Hello World")
@@ -50,18 +50,18 @@ else:
     for i in "Hello World":
         print(i)
 
-#数值运算
-#1.
+# 数值运算
+# 1.
 M = input()
 result = eval(M)
 print("{:.2f}".format(result))
-#2.
+# 2.
 s = input()
 print("{:.2f}".format(eval(s)))
 
 
-#货币转换
-#1.
+# 货币转换
+# 1.
 Money = input()
 if Money[0:2] == "RMB":
     USD = (eval(Money[3:]) / 6.78)
@@ -69,8 +69,7 @@ if Money[0:2] == "RMB":
 elif Money[0:2] == "USD":
     RMB = (eval(Money[3:]) * 6.78)
     print("RMB{:.2f}".format(RMB))
-
-#2.
+# 2.
 CurStr = input()
 if CurStr[:3] == "RMB":
     print("USD{:.2f}".format(eval(CurStr[3:]) / 6.78))
