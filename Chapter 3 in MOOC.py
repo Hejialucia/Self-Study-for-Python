@@ -208,15 +208,20 @@ n = eval(input())       # 获得输入
 for i in range(1,n+1,2):        # 从1开始,到n+1结束(不然n算不上),步长为2保证奇数
     print("{0:^{1}}".format('*'*i, n))      # 槽套槽！{"0:居中{宽度}".format(用i个图标打印,可以保证留空)}
 
-# 作业2：凯撒加密
+# 作业2：凯撒加密 C=(P+3) % 26
+# python中ord()函数
+# ord() 函数是 chr() 函数（对于8位的ASCII字符串）或 unichr() 函数（对于Unicode对象）的配对函数，
+# 它以一个字符（长度为1的字符串）作为参数，返回对应的 ASCII 数值，或者 Unicode 数值，
+# 如果所给的 Unicode 字符超出了你的 Python 定义范围，则会引发一个 TypeError 的异常。
+# ord('a') - 97
 s = input()
 t = ""
 for c in s:
-    if 'a' <= c <= 'z': 
-        t += chr( ord('a') + ((ord(c)-ord('a')) + 3 )%26 )
+    if 'a' <= c <= 'z':
+        t += chr( ord('a') + ((ord(c)-ord('a')) + 3 )%26 )      
     elif 'A' <= c <= 'Z':
         t += chr( ord('A') + ((ord(c)-ord('A')) + 3 )%26 )
     else:
-        t += c
+        t += c      # 空格和特殊符号直接转换
 print(t)
 
