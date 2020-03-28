@@ -207,3 +207,16 @@ print("\n"+"执行结束".center(scale//2,'-'))
 n = eval(input())       # 获得输入
 for i in range(1,n+1,2):        # 从1开始,到n+1结束(不然n算不上),步长为2保证奇数
     print("{0:^{1}}".format('*'*i, n))      # 槽套槽！{"0:居中{宽度}".format(用i个图标打印,可以保证留空)}
+
+# 作业2：凯撒加密
+s = input()
+t = ""
+for c in s:
+    if 'a' <= c <= 'z': 
+        t += chr( ord('a') + ((ord(c)-ord('a')) + 3 )%26 )
+    elif 'A' <= c <= 'Z':
+        t += chr( ord('A') + ((ord(c)-ord('A')) + 3 )%26 )
+    else:
+        t += c
+print(t)
+
